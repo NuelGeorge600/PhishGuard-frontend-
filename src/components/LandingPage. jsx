@@ -1,0 +1,13 @@
+import React from "react";
+import DropdownTool from "./DropdownTool";
+
+function LandingPage() {
+  return (
+    <div style={{ padding: "2rem" }}>
+      <h1>Welcome to PhishGuard</h1>
+      <DropdownTool />
+    </div>
+  );
+}
+
+export default LandingPage;
