@@ -1,0 +1,26 @@
+import React, { useState } from "react";
+
+function DropdownTool() {
+  const [selected, setSelected] = useState("");
+  const tools = ["Check Email", "Check Link", "Admin Login"];
+
+  return (
+    <div>
+      <label htmlFor="tools">Select Tool: </label>
+      <select
+        id="tools"
+        value={selected}
+        onChange={e => setSelected(e.target.value)}
+      >
+        <option value="">--Choose--</option>
+        {tools.map(tool => (
+          <option key={tool} value={tool}>
+            {tool}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+}
+
+export default DropdownTool;
